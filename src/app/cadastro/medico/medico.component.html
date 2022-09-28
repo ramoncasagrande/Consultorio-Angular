@@ -1,0 +1,47 @@
+<br>
+<h3>Médico</h3>
+<hr />
+<form>
+    <div class="mb-3">
+        <label for="nome" id="nome" class="form-label">Nome</label>
+        <input  type="text" 
+                class="form-control {{ field_form }}" 
+                id="nome" 
+                [(ngModel)]='dados.nome' 
+                name="nome" 
+                aria-describedby="Nome">
+    </div>
+    <div class="mb-3">
+        <label for="nome" id="crm" class="form-label">CRM</label>
+        <input  type="text" 
+                class="form-control {{ field_form }}" 
+                id="crm" 
+                [(ngModel)]='dados.crm' 
+                name="crm" 
+                aria-describedby="crm">
+    </div>
+    <div class="mb-3">
+        <label for="nome" id="telefone" class="form-label">Telefone</label>
+        <input  type="text" 
+                class="form-control {{ field_form }}" 
+                id="telefone" 
+                [(ngModel)]='dados.telefone'
+                name="telefone" 
+                aria-describedby="telefone">
+    </div>
+    <div class="mb-3">
+        <label for="nome" id="especialidade" class="form-label">Especialidade</label>
+        <select name="especialidade" id="especialidade" [(ngModel)]="dados.especialidade" class="form-select" aria-label="Default select example">
+            <option selected>Selecione a Especialidade</option>
+            <option value='1'>Obstetra</option>
+            <option value='2'>Pediatra</option>
+            <option value='3'>Dermatologista</option>
+        </select>
+    </div>
+    
+    <button type="button" 
+            class="btn btn-primary"
+            (click)="salvar()"
+    >Salvar</button>
+    <button type="button" class="btn btn-primary" (click)="novo()">Novo</button>
+</form>
