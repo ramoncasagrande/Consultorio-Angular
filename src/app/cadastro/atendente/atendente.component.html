@@ -1,0 +1,19 @@
+<br>
+<h3>Atendente</h3>
+<hr />
+<form>
+    <div class="mb-3">
+        <label for="nome" id="nome" class="form-label">Nome</label>
+        <input  type="text" 
+                class="form-control {{ field_form }}" 
+                id="nome" 
+                [(ngModel)]='dados.nome' 
+                name="nome" 
+                aria-describedby="Nome">
+    </div>
+    <button type="button" 
+            class="btn btn-primary"
+            (click)="salvar()"
+    >Salvar</button>
+    <button type="button" class="btn btn-primary" (click)="novo()">Novo</button>
+</form>
